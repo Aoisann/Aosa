@@ -17,10 +17,17 @@
             color: #fff;
             display: flex;
             align-items: center;
-            padding: 16px 0 10px 0;
+            padding: 36px 0 26px 0; /* ←縦のpaddingを増やして高さをアップ */
             margin-bottom: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.13);
             position: relative;
+            /* 追加: 幅を広げる */
+            width: 100vw;
+            min-width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
         }
         .site-title-bar .site-title {
             flex: 1;
@@ -215,16 +222,16 @@
 </head>
 <body>
     <div class="site-title-bar">
-        <a id="backToMain"
-           href="#"
-           class="back-link"
-           style="background: #fff; color: #3a3f47; border: 1px solid #3a3f47;">
-            元のページに戻る
-        </a>
         <span class="site-title" style="position: absolute; left: 0; right: 0; margin: auto; width: max-content;">
             Quake Guard
         </span>
     </div>
+    <a id="backToMain"
+       href="#"
+       class="back-link"
+       style="background: #fff; color: #3a3f47; border: 1px solid #3a3f47; display: block; width: fit-content; margin: 0 0 18px 24px;">
+        元のページに戻る
+    </a>
     <div class="main-flex">
         <!-- 左側：説明と電話番号登録フォーム -->
         <div class="main-content">
